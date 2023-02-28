@@ -1,17 +1,22 @@
 *** Settings ***
-Library    Browser
-
+Resource    ../Resources/common.robot
+Resource    ../Resources/ikea_app.robot
+Suite Setup  Start Browser
+Suite Teardown    End Browser
 
 
 *** Variables ***
-${IKEA_WELCOME_TEXT} =  css=h1.c1m1sl8e
+
 
 
 *** Test Cases ***
-Open Ikea website
-    Open Browser    https://www.ikea.com/de/de/
-    Get Text        ${IKEA_WELCOME_TEXT}    contains    Willkommen bei IKEA Deutschland
+Ikea "Main" Page Should Open
+    Open Ikea Main Page
 
+Login Menu Should Open
+    Open "Login" Menu
 
-
-    
+Valid Error Should Be Seen
+    Open Ikea Main Page
+    Open "Login" Menu
+    Login

@@ -1,0 +1,84 @@
+{"level":30,"time":"2023-02-28T20:00:21.873Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Listening on 61424"}
+{"level":30,"time":"2023-02-28T20:00:22.112Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:22.112Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:22.116Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-02-28T20:00:22.334Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-02-28T20:00:22.336Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-02-28T20:00:22.337Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-02-28T20:00:22.337Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Trace file: "}
+{"level":30,"time":"2023-02-28T20:00:22.350Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Changed active context"}
+{"level":30,"time":"2023-02-28T20:00:22.350Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method newContext"}
+{"level":30,"time":"2023-02-28T20:00:22.352Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-02-28T20:00:22.352Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-02-28T20:00:22.448Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Video path: undefined"}
+{"level":30,"time":"2023-02-28T20:00:22.448Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Changed active page"}
+{"level":30,"time":"2023-02-28T20:00:22.665Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method newPage"}
+{"level":30,"time":"2023-02-28T20:00:24.684Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:24.691Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:24.696Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-02-28T20:00:25.870Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method goTo"}
+{"level":30,"time":"2023-02-28T20:00:25.875Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:25.876Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=h1.c1m1sl8e in page."}
+{"level":30,"time":"2023-02-28T20:00:26.018Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Retrieved text for element css=h1.c1m1sl8e containing Willkommen bei IKEA Deutschland"}
+{"level":30,"time":"2023-02-28T20:00:26.018Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:26.025Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.144Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.147Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.211Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.214Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method click"}
+{"level":30,"time":"2023-02-28T20:00:26.214Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#loyalty-modal-button in page."}
+{"level":30,"time":"2023-02-28T20:00:26.329Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method click"}
+{"level":30,"time":"2023-02-28T20:00:26.332Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:26.332Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#header__button in page."}
+{"level":30,"time":"2023-02-28T20:00:26.455Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Retrieved text for element css=#header__button containing Einloggen"}
+{"level":30,"time":"2023-02-28T20:00:26.455Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:26.459Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.461Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.465Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.467Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:26.469Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-02-28T20:00:27.017Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method goTo"}
+{"level":30,"time":"2023-02-28T20:00:27.020Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:27.020Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=h1.c1m1sl8e in page."}
+{"level":30,"time":"2023-02-28T20:00:27.130Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Retrieved text for element css=h1.c1m1sl8e containing Willkommen bei IKEA Deutschland"}
+{"level":30,"time":"2023-02-28T20:00:27.130Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:27.133Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method click"}
+{"level":30,"time":"2023-02-28T20:00:27.133Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#loyalty-modal-button in page."}
+{"level":30,"time":"2023-02-28T20:00:27.285Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method click"}
+{"level":30,"time":"2023-02-28T20:00:27.290Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:27.291Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#header__button in page."}
+{"level":30,"time":"2023-02-28T20:00:27.332Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Retrieved text for element css=#header__button containing Einloggen"}
+{"level":30,"time":"2023-02-28T20:00:27.332Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getText"}
+{"level":30,"time":"2023-02-28T20:00:27.335Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method click"}
+{"level":30,"time":"2023-02-28T20:00:27.335Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#header__button in page."}
+{"level":30,"time":"2023-02-28T20:00:27.965Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method click"}
+{"level":30,"time":"2023-02-28T20:00:27.967Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-02-28T20:00:27.967Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#username in page."}
+{"level":30,"time":"2023-02-28T20:00:30.325Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method typeText"}
+{"level":30,"time":"2023-02-28T20:00:30.327Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-02-28T20:00:30.327Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2023-02-28T20:00:30.375Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method typeText"}
+{"level":30,"time":"2023-02-28T20:00:30.377Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method click"}
+{"level":30,"time":"2023-02-28T20:00:30.377Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Strict mode is enabled, find Locator with css=button.btn.btn--emphasised in page."}
+{"level":30,"time":"2023-02-28T20:00:30.459Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method click"}
+{"level":30,"time":"2023-02-28T20:00:30.463Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:30.464Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:30.468Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-02-28T20:00:30.484Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Removed page=11e77488-518d-4fea-8292-82b69888ae33 from context=3bbe6dfa-26ec-4c7e-a2b9-c10332b82c0d page stack"}
+{"level":30,"time":"2023-02-28T20:00:30.684Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\wladd\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\wladd\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (C:\Users\wladd\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at C:\Users\wladd\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\wladd\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\wladd\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-02-28T20:00:30.689Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:30.689Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-02-28T20:00:30.711Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-02-28T20:00:30.711Z","pid":6404,"hostname":"DESKTOP-2HLMF8K","msg":"End of node method closeAllBrowsers"}
