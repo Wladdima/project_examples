@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Browser
-Resource   ../Data/input_data.robot 
+Resource   ../Data/input_user_data.robot 
 
 *** Variables ***
 ${USERNAME_FIELD} =  css=#username

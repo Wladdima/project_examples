@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230301 21:45:48.334" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230301 21:55:53.024" rpa="false" schemaversion="3">
 <suite id="s1" name="Ikea" source="C:\development\robot-scripts\project_examples\tests\ikea.robot">
 <kw name="Start Browser" library="common" type="SETUP">
 <kw name="Open Browser" library="Browser">
@@ -7,10 +7,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
-<msg timestamp="20230301 21:45:48.984" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20230301 21:45:48.985" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\development\\robot-scripts\\project_examples\\results\\browser\\traces\\1b0c6fcb-b789-4044-abd9-b5d1b6c517e9"}</msg>
-<msg timestamp="20230301 21:45:49.222" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\development\\robot-scripts\\project_examples\\results\\browser\\traces\\1b0c6fcb-b789-4044-abd9-b5d1b6c517e9"}</msg>
-<msg timestamp="20230301 21:45:49.223" level="INFO">{
+<msg timestamp="20230301 21:55:53.673" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20230301 21:55:53.674" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\development\\robot-scripts\\project_examples\\results\\browser\\traces\\653cfdec-f497-448c-b09d-9515f258c281"}</msg>
+<msg timestamp="20230301 21:55:53.884" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\development\\robot-scripts\\project_examples\\results\\browser\\traces\\653cfdec-f497-448c-b09d-9515f258c281"}</msg>
+<msg timestamp="20230301 21:55:53.885" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": true,
   "forcedColors": "none",
@@ -25,18 +25,18 @@
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230301 21:45:49.238" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230301 21:45:49.238" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<msg timestamp="20230301 21:45:49.566" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
-<status status="PASS" starttime="20230301 21:45:48.983" endtime="20230301 21:45:49.567"/>
+<msg timestamp="20230301 21:55:53.903" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230301 21:55:53.903" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<msg timestamp="20230301 21:55:54.214" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20230301 21:55:53.673" endtime="20230301 21:55:54.215"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230301 21:45:51.572" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230301 21:45:49.568" endtime="20230301 21:45:51.572"/>
+<msg timestamp="20230301 21:55:56.217" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230301 21:55:54.215" endtime="20230301 21:55:56.217"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:48.983" endtime="20230301 21:45:51.572"/>
+<status status="PASS" starttime="20230301 21:55:53.673" endtime="20230301 21:55:56.218"/>
 </kw>
 <test id="s1-t1" name="Ikea &quot;Main&quot; Page Should Open" line="15">
 <kw name="Open Ikea Main Page" library="ikea_app">
@@ -46,10 +46,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230301 21:45:54.372" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230301 21:45:51.580" endtime="20230301 21:45:54.372"/>
+<msg timestamp="20230301 21:55:57.678" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
+<status status="PASS" starttime="20230301 21:55:56.230" endtime="20230301 21:55:57.678"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:51.580" endtime="20230301 21:45:54.372"/>
+<status status="PASS" starttime="20230301 21:55:56.230" endtime="20230301 21:55:57.678"/>
 </kw>
 <kw name="Verify &quot;Main&quot; Page Opened" library="main_page">
 <kw name="Get Text" library="Browser">
@@ -60,14 +60,14 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230301 21:45:54.443" level="INFO">Text: 'Willkommen bei IKEA Deutschland'</msg>
-<status status="PASS" starttime="20230301 21:45:54.373" endtime="20230301 21:45:54.444"/>
+<msg timestamp="20230301 21:55:57.972" level="INFO">Text: 'Willkommen bei IKEA Deutschland'</msg>
+<status status="PASS" starttime="20230301 21:55:57.679" endtime="20230301 21:55:57.972"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:54.372" endtime="20230301 21:45:54.444"/>
+<status status="PASS" starttime="20230301 21:55:57.678" endtime="20230301 21:55:57.972"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:51.579" endtime="20230301 21:45:54.444"/>
+<status status="PASS" starttime="20230301 21:55:56.229" endtime="20230301 21:55:57.973"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:51.572" endtime="20230301 21:45:54.445"/>
+<status status="PASS" starttime="20230301 21:55:56.218" endtime="20230301 21:55:57.973"/>
 </test>
 <test id="s1-t2" name="Login Menu Should Open" line="18">
 <kw name="Open &quot;Login&quot; Menu" library="ikea_app">
@@ -77,10 +77,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230301 21:45:55.919" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230301 21:45:54.571" endtime="20230301 21:45:55.919"/>
+<msg timestamp="20230301 21:55:58.623" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
+<status status="PASS" starttime="20230301 21:55:58.041" endtime="20230301 21:55:58.623"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:54.571" endtime="20230301 21:45:55.919"/>
+<status status="PASS" starttime="20230301 21:55:58.041" endtime="20230301 21:55:58.623"/>
 </kw>
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
@@ -88,9 +88,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:45:55.920" endtime="20230301 21:45:56.012"/>
+<status status="PASS" starttime="20230301 21:55:58.624" endtime="20230301 21:55:58.930"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:55.919" endtime="20230301 21:45:56.012"/>
+<status status="PASS" starttime="20230301 21:55:58.623" endtime="20230301 21:55:58.930"/>
 </kw>
 <kw name="Verify &quot;Login&quot; Menu Opened" library="main_page">
 <kw name="Get Text" library="Browser">
@@ -101,14 +101,14 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230301 21:45:56.257" level="INFO">Text: 'Einloggen'</msg>
-<status status="PASS" starttime="20230301 21:45:56.013" endtime="20230301 21:45:56.257"/>
+<msg timestamp="20230301 21:55:59.093" level="INFO">Text: 'Einloggen'</msg>
+<status status="PASS" starttime="20230301 21:55:58.931" endtime="20230301 21:55:59.093"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:56.012" endtime="20230301 21:45:56.258"/>
+<status status="PASS" starttime="20230301 21:55:58.931" endtime="20230301 21:55:59.093"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:54.570" endtime="20230301 21:45:56.258"/>
+<status status="PASS" starttime="20230301 21:55:58.041" endtime="20230301 21:55:59.093"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:54.463" endtime="20230301 21:45:56.258"/>
+<status status="PASS" starttime="20230301 21:55:57.980" endtime="20230301 21:55:59.094"/>
 </test>
 <test id="s1-t3" name="Valid Error Text After Login With Invalid Data Should Be Seen" line="21">
 <kw name="Login with invalid data" library="ikea_app">
@@ -119,10 +119,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230301 21:45:56.959" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230301 21:45:56.273" endtime="20230301 21:45:56.959"/>
+<msg timestamp="20230301 21:55:59.834" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
+<status status="PASS" starttime="20230301 21:55:59.107" endtime="20230301 21:55:59.834"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:56.273" endtime="20230301 21:45:56.959"/>
+<status status="PASS" starttime="20230301 21:55:59.107" endtime="20230301 21:55:59.834"/>
 </kw>
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
@@ -130,9 +130,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:45:56.960" endtime="20230301 21:45:57.293"/>
+<status status="PASS" starttime="20230301 21:55:59.834" endtime="20230301 21:56:00.150"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:56.959" endtime="20230301 21:45:57.293"/>
+<status status="PASS" starttime="20230301 21:55:59.834" endtime="20230301 21:56:00.150"/>
 </kw>
 <kw name="Open &quot;Login&quot; Page" library="main_page">
 <kw name="Click" library="Browser">
@@ -140,9 +140,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:45:57.294" endtime="20230301 21:45:58.090"/>
+<status status="PASS" starttime="20230301 21:56:00.151" endtime="20230301 21:56:00.852"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:57.293" endtime="20230301 21:45:58.091"/>
+<status status="PASS" starttime="20230301 21:56:00.150" endtime="20230301 21:56:00.852"/>
 </kw>
 <kw name="Input invalid login data" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -154,10 +154,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:45:58.092" level="INFO">Types the text 'abc@mail.com' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:45:58.092" endtime="20230301 21:46:00.669"/>
+<msg timestamp="20230301 21:56:00.855" level="INFO">Types the text 'abc@mail.com' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:00.854" endtime="20230301 21:56:03.247"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:58.091" endtime="20230301 21:46:00.669"/>
+<status status="PASS" starttime="20230301 21:56:00.853" endtime="20230301 21:56:03.247"/>
 </kw>
 <kw name="Input Password" library="login_page">
 <arg>${INVALID_LOGIN_DATA.password}</arg>
@@ -167,12 +167,12 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:00.671" level="INFO">Types the text '12345678' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:46:00.670" endtime="20230301 21:46:00.731"/>
+<msg timestamp="20230301 21:56:03.248" level="INFO">Types the text '12345678' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:03.248" endtime="20230301 21:56:03.302"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:00.670" endtime="20230301 21:46:00.731"/>
+<status status="PASS" starttime="20230301 21:56:03.247" endtime="20230301 21:56:03.302"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:58.091" endtime="20230301 21:46:00.731"/>
+<status status="PASS" starttime="20230301 21:56:00.853" endtime="20230301 21:56:03.302"/>
 </kw>
 <kw name="Submit login" library="login_page">
 <kw name="Click" library="Browser">
@@ -180,9 +180,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:00.732" endtime="20230301 21:46:00.809"/>
+<status status="PASS" starttime="20230301 21:56:03.303" endtime="20230301 21:56:03.384"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:00.731" endtime="20230301 21:46:00.809"/>
+<status status="PASS" starttime="20230301 21:56:03.303" endtime="20230301 21:56:03.385"/>
 </kw>
 <kw name="Check error message text" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -194,12 +194,12 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:01.061" level="INFO">Text: 'Bitte überprüfe deine Eingaben'</msg>
-<status status="PASS" starttime="20230301 21:46:00.810" endtime="20230301 21:46:01.061"/>
+<msg timestamp="20230301 21:56:03.657" level="INFO">Text: 'Bitte überprüfe deine Eingaben'</msg>
+<status status="PASS" starttime="20230301 21:56:03.385" endtime="20230301 21:56:03.657"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:00.809" endtime="20230301 21:46:01.061"/>
+<status status="PASS" starttime="20230301 21:56:03.385" endtime="20230301 21:56:03.657"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:56.272" endtime="20230301 21:46:01.061"/>
+<status status="PASS" starttime="20230301 21:55:59.107" endtime="20230301 21:56:03.657"/>
 </kw>
 <kw name="Login with invalid data" library="ikea_app">
 <arg>${LOGIN_WITHOUT_EMAIL}</arg>
@@ -209,10 +209,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230301 21:46:01.563" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230301 21:46:01.062" endtime="20230301 21:46:01.563"/>
+<msg timestamp="20230301 21:56:04.165" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
+<status status="PASS" starttime="20230301 21:56:03.658" endtime="20230301 21:56:04.166"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:01.062" endtime="20230301 21:46:01.563"/>
+<status status="PASS" starttime="20230301 21:56:03.658" endtime="20230301 21:56:04.167"/>
 </kw>
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
@@ -220,9 +220,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:01.563" endtime="20230301 21:46:01.862"/>
+<status status="PASS" starttime="20230301 21:56:04.168" endtime="20230301 21:56:04.448"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:01.563" endtime="20230301 21:46:01.862"/>
+<status status="PASS" starttime="20230301 21:56:04.167" endtime="20230301 21:56:04.449"/>
 </kw>
 <kw name="Open &quot;Login&quot; Page" library="main_page">
 <kw name="Click" library="Browser">
@@ -230,9 +230,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:01.863" endtime="20230301 21:46:02.183"/>
+<status status="PASS" starttime="20230301 21:56:04.449" endtime="20230301 21:56:04.748"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:01.862" endtime="20230301 21:46:02.183"/>
+<status status="PASS" starttime="20230301 21:56:04.449" endtime="20230301 21:56:04.749"/>
 </kw>
 <kw name="Input invalid login data" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -244,10 +244,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:02.184" level="INFO">Types the text '' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:46:02.184" endtime="20230301 21:46:03.577"/>
+<msg timestamp="20230301 21:56:04.751" level="INFO">Types the text '' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:04.750" endtime="20230301 21:56:05.843"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:02.183" endtime="20230301 21:46:03.577"/>
+<status status="PASS" starttime="20230301 21:56:04.749" endtime="20230301 21:56:05.843"/>
 </kw>
 <kw name="Input Password" library="login_page">
 <arg>${INVALID_LOGIN_DATA.password}</arg>
@@ -257,12 +257,12 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:03.578" level="INFO">Types the text '12345678' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:46:03.578" endtime="20230301 21:46:03.641"/>
+<msg timestamp="20230301 21:56:05.844" level="INFO">Types the text '12345678' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:05.843" endtime="20230301 21:56:05.912"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:03.578" endtime="20230301 21:46:03.642"/>
+<status status="PASS" starttime="20230301 21:56:05.843" endtime="20230301 21:56:05.912"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:02.183" endtime="20230301 21:46:03.642"/>
+<status status="PASS" starttime="20230301 21:56:04.749" endtime="20230301 21:56:05.912"/>
 </kw>
 <kw name="Submit login" library="login_page">
 <kw name="Click" library="Browser">
@@ -270,9 +270,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:03.642" endtime="20230301 21:46:03.844"/>
+<status status="PASS" starttime="20230301 21:56:05.912" endtime="20230301 21:56:06.079"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:03.642" endtime="20230301 21:46:03.844"/>
+<status status="PASS" starttime="20230301 21:56:05.912" endtime="20230301 21:56:06.079"/>
 </kw>
 <kw name="Check error message text" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -284,12 +284,12 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:03.870" level="INFO">Text: 'Bitte logge dich mit deiner E-Mail Adresse ein.\xa0'</msg>
-<status status="PASS" starttime="20230301 21:46:03.844" endtime="20230301 21:46:03.870"/>
+<msg timestamp="20230301 21:56:06.096" level="INFO">Text: 'Bitte logge dich mit deiner E-Mail Adresse ein.\xa0'</msg>
+<status status="PASS" starttime="20230301 21:56:06.080" endtime="20230301 21:56:06.096"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:03.844" endtime="20230301 21:46:03.870"/>
+<status status="PASS" starttime="20230301 21:56:06.079" endtime="20230301 21:56:06.097"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:01.061" endtime="20230301 21:46:03.871"/>
+<status status="PASS" starttime="20230301 21:56:03.657" endtime="20230301 21:56:06.097"/>
 </kw>
 <kw name="Login with invalid data" library="ikea_app">
 <arg>${LOGIN_WITHOUT_PASSWORD}</arg>
@@ -299,10 +299,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230301 21:46:04.431" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230301 21:46:03.872" endtime="20230301 21:46:04.431"/>
+<msg timestamp="20230301 21:56:06.621" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
+<status status="PASS" starttime="20230301 21:56:06.098" endtime="20230301 21:56:06.621"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:03.872" endtime="20230301 21:46:04.431"/>
+<status status="PASS" starttime="20230301 21:56:06.098" endtime="20230301 21:56:06.622"/>
 </kw>
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
@@ -310,9 +310,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:04.432" endtime="20230301 21:46:04.692"/>
+<status status="PASS" starttime="20230301 21:56:06.622" endtime="20230301 21:56:06.895"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:04.432" endtime="20230301 21:46:04.692"/>
+<status status="PASS" starttime="20230301 21:56:06.622" endtime="20230301 21:56:06.896"/>
 </kw>
 <kw name="Open &quot;Login&quot; Page" library="main_page">
 <kw name="Click" library="Browser">
@@ -320,9 +320,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:04.693" endtime="20230301 21:46:04.979"/>
+<status status="PASS" starttime="20230301 21:56:06.896" endtime="20230301 21:56:07.199"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:04.692" endtime="20230301 21:46:04.979"/>
+<status status="PASS" starttime="20230301 21:56:06.896" endtime="20230301 21:56:07.199"/>
 </kw>
 <kw name="Input invalid login data" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -334,10 +334,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:04.981" level="INFO">Types the text 'abc@mail.com' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:46:04.980" endtime="20230301 21:46:06.099"/>
+<msg timestamp="20230301 21:56:07.202" level="INFO">Types the text 'abc@mail.com' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:07.201" endtime="20230301 21:56:08.172"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:04.979" endtime="20230301 21:46:06.099"/>
+<status status="PASS" starttime="20230301 21:56:07.199" endtime="20230301 21:56:08.172"/>
 </kw>
 <kw name="Input Password" library="login_page">
 <arg>${INVALID_LOGIN_DATA.password}</arg>
@@ -347,12 +347,12 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:06.100" level="INFO">Types the text '' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:46:06.100" endtime="20230301 21:46:06.115"/>
+<msg timestamp="20230301 21:56:08.173" level="INFO">Types the text '' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:08.173" endtime="20230301 21:56:08.260"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.099" endtime="20230301 21:46:06.115"/>
+<status status="PASS" starttime="20230301 21:56:08.172" endtime="20230301 21:56:08.260"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:04.979" endtime="20230301 21:46:06.115"/>
+<status status="PASS" starttime="20230301 21:56:07.199" endtime="20230301 21:56:08.260"/>
 </kw>
 <kw name="Submit login" library="login_page">
 <kw name="Click" library="Browser">
@@ -360,9 +360,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:06.116" endtime="20230301 21:46:06.293"/>
+<status status="PASS" starttime="20230301 21:56:08.261" endtime="20230301 21:56:08.330"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.116" endtime="20230301 21:46:06.294"/>
+<status status="PASS" starttime="20230301 21:56:08.260" endtime="20230301 21:56:08.330"/>
 </kw>
 <kw name="Check error message text" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -374,14 +374,14 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:06.312" level="INFO">Text: 'Es tut uns leid, wir können dich nicht ohne Passwort einloggen.\xa0'</msg>
-<status status="PASS" starttime="20230301 21:46:06.294" endtime="20230301 21:46:06.312"/>
+<msg timestamp="20230301 21:56:08.349" level="INFO">Text: 'Es tut uns leid, wir können dich nicht ohne Passwort einloggen.\xa0'</msg>
+<status status="PASS" starttime="20230301 21:56:08.331" endtime="20230301 21:56:08.349"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.294" endtime="20230301 21:46:06.312"/>
+<status status="PASS" starttime="20230301 21:56:08.331" endtime="20230301 21:56:08.349"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:03.871" endtime="20230301 21:46:06.312"/>
+<status status="PASS" starttime="20230301 21:56:06.097" endtime="20230301 21:56:08.349"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:56.263" endtime="20230301 21:46:06.313"/>
+<status status="PASS" starttime="20230301 21:55:59.099" endtime="20230301 21:56:08.350"/>
 </test>
 <test id="s1-t4" name="Search Should Work" line="27">
 <kw name="Find item" library="ikea_app">
@@ -392,10 +392,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230301 21:46:06.872" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230301 21:46:06.324" endtime="20230301 21:46:06.873"/>
+<msg timestamp="20230301 21:56:08.906" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
+<status status="PASS" starttime="20230301 21:56:08.359" endtime="20230301 21:56:08.906"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.324" endtime="20230301 21:46:06.873"/>
+<status status="PASS" starttime="20230301 21:56:08.359" endtime="20230301 21:56:08.906"/>
 </kw>
 <kw name="Search" library="top_nav">
 <arg>${SEARCH_ATTRIBUTE}</arg>
@@ -405,23 +405,23 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:06.874" level="INFO">Types the text 'stuhl' in the given field.</msg>
-<status status="PASS" starttime="20230301 21:46:06.873" endtime="20230301 21:46:07.191"/>
+<msg timestamp="20230301 21:56:08.908" level="INFO">Types the text 'stuhl' in the given field.</msg>
+<status status="PASS" starttime="20230301 21:56:08.907" endtime="20230301 21:56:09.235"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230301 21:46:09.204" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230301 21:46:07.192" endtime="20230301 21:46:09.204"/>
+<msg timestamp="20230301 21:56:11.247" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230301 21:56:09.236" endtime="20230301 21:56:11.247"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>${SEARCH_BUTTON}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230301 21:46:09.204" endtime="20230301 21:46:09.670"/>
+<status status="PASS" starttime="20230301 21:56:11.247" endtime="20230301 21:56:11.447"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.873" endtime="20230301 21:46:09.670"/>
+<status status="PASS" starttime="20230301 21:56:08.907" endtime="20230301 21:56:11.447"/>
 </kw>
 <kw name="Check search summary heading" library="results_list">
 <arg>${SEARCH_ATTRIBUTE}</arg>
@@ -433,32 +433,32 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230301 21:46:10.576" level="INFO">Text: 'Ergebnisse für „stuhl“'</msg>
-<status status="PASS" starttime="20230301 21:46:09.671" endtime="20230301 21:46:10.576"/>
+<msg timestamp="20230301 21:56:12.354" level="INFO">Text: 'Ergebnisse für „stuhl“'</msg>
+<status status="PASS" starttime="20230301 21:56:11.448" endtime="20230301 21:56:12.354"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:09.670" endtime="20230301 21:46:10.576"/>
+<status status="PASS" starttime="20230301 21:56:11.447" endtime="20230301 21:56:12.354"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.324" endtime="20230301 21:46:10.576"/>
+<status status="PASS" starttime="20230301 21:56:08.359" endtime="20230301 21:56:12.354"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230301 21:46:13.587" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230301 21:46:10.577" endtime="20230301 21:46:13.587"/>
+<msg timestamp="20230301 21:56:15.358" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230301 21:56:12.355" endtime="20230301 21:56:15.358"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:06.319" endtime="20230301 21:46:13.589"/>
+<status status="PASS" starttime="20230301 21:56:08.355" endtime="20230301 21:56:15.359"/>
 </test>
 <kw name="End Browser" library="common" type="TEARDOWN">
 <kw name="Close Browser" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20230301 21:46:13.822" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230301 21:46:13.601" endtime="20230301 21:46:13.822"/>
+<msg timestamp="20230301 21:56:15.640" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230301 21:56:15.374" endtime="20230301 21:56:15.640"/>
 </kw>
-<status status="PASS" starttime="20230301 21:46:13.600" endtime="20230301 21:46:13.822"/>
+<status status="PASS" starttime="20230301 21:56:15.373" endtime="20230301 21:56:15.640"/>
 </kw>
-<status status="PASS" starttime="20230301 21:45:48.336" endtime="20230301 21:46:13.822"/>
+<status status="PASS" starttime="20230301 21:55:53.025" endtime="20230301 21:56:15.640"/>
 </suite>
 <statistics>
 <total>
@@ -471,7 +471,6 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230301 21:45:48.446" level="ERROR">Error in file 'C:\development\robot-scripts\project_examples\Resources\PO\login_page.robot' on line 3: Resource file '..\Data\input_data.robot' does not exist.</msg>
-<msg timestamp="20230301 21:45:48.984" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20230301 21:55:53.673" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>
