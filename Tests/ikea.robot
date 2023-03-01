@@ -1,6 +1,8 @@
 *** Settings ***
 Resource    ../Resources/common.robot
 Resource    ../Resources/ikea_app.robot
+Resource    ../Resources/Data/input_user_data.robot
+Resource    ../Resources/Data/search_data.robot
 Suite Setup  Start Browser
 Suite Teardown    End Browser
 
@@ -16,7 +18,12 @@ Ikea "Main" Page Should Open
 Login Menu Should Open
     Open "Login" Menu
 
-Valid Error Should Be Seen
-    Open Ikea Main Page
-    Open "Login" Menu
-    Login
+Valid Error Text After Login With Invalid Data Should Be Seen
+    [Template]    Login with Invalid Data
+    ${LOGIN_WITH_INVALID_DATA}
+    ${LOGIN_WITHOUT_EMAIL}
+    ${LOGIN_WITHOUT_PASSWORD}
+
+Search Should Work
+    Find item    ${SEARCH_ATTRIBUTE}
+    Sleep        3s

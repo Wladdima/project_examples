@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Browser 
-
+Resource   PO/main_page.robot
 
 
 *** Keywords ***
