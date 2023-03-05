@@ -32,8 +32,7 @@ Find item
     results_list.Check search summary heading    ${SEARCH_ATTRIBUTE}
 
 Filter item
-    [Arguments]    ${SEARCH_ATTRIBUTE}
+    [Arguments]    ${SEARCH_ATTRIBUTE}    ${FILTER}
     main_page.Open "Main" Page
     top_nav.Search    ${SEARCH_ATTRIBUTE}
-    results_list.Choose Filter
-    results_list.Check filtered results
+    results_list.Filter Items    ${FILTER}

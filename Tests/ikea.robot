@@ -29,5 +29,5 @@ Search Should Work
     Sleep        3s
 
 Search Results Should Be Filtered
-    Filter item    ${SEARCH_ATTRIBUTE}
+    Filter item    ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_COLOR}
     Sleep          3s
