@@ -30,3 +30,10 @@ Find item
     main_page.Open "Main" Page
     top_nav.Search    ${SEARCH_ATTRIBUTE}
     results_list.Check search summary heading    ${SEARCH_ATTRIBUTE}
+
+Filter item
+    [Arguments]    ${SEARCH_ATTRIBUTE}
+    main_page.Open "Main" Page
+    top_nav.Search    ${SEARCH_ATTRIBUTE}
+    results_list.Choose Filter
+    results_list.Check filtered results

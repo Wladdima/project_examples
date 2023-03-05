@@ -27,3 +27,7 @@ Valid Error Text After Login With Invalid Data Should Be Seen
 Search Should Work
     Find item    ${SEARCH_ATTRIBUTE}
     Sleep        3s
+
+Search Results Should Be Filtered
+    Filter item    ${SEARCH_ATTRIBUTE}
+    Sleep          3s
