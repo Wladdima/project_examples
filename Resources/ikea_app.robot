@@ -31,8 +31,14 @@ Find item
     top_nav.Search    ${SEARCH_ATTRIBUTE}
     results_list.Check search summary heading    ${SEARCH_ATTRIBUTE}
 
-Filter item
+Filter Items By Colors
     [Arguments]    ${SEARCH_ATTRIBUTE}    ${FILTER}
     main_page.Open "Main" Page
     top_nav.Search    ${SEARCH_ATTRIBUTE}
-    results_list.Filter Items    ${FILTER}
+    results_list.Filter By Colors    ${FILTER}
+
+Filter Items By Prices
+    [Arguments]    ${SEARCH_ATTRIBUTE}    ${FILTER}
+    main_page.Open "Main" Page
+    top_nav.Search    ${SEARCH_ATTRIBUTE}
+    results_list.Filter By Prices    ${FILTER}
