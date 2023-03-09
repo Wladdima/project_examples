@@ -20,11 +20,18 @@ ${PRICE_RANGE_800} =  800,00
 ${PRICE_RANGE}
 
 
-${COLOR_VALUE} =  rot
+${RED_COLOR_VALUE} =  rot
+${GREEN_COLOR_VALUE} =  grün
+${BLACK_COLOR_VALUE} =  schwarz
+${WHITE_COLOR_VALUE} =  weiß
+
 ${FILTER_LABEL} =  css=div.plp-applied-filters-bar > button
 
 
-&{FILTER_FOR_COLOR}    type=${FILTER_COLOR}    value=#${COLOR_VALUE}    label=${FILTER_LABEL}    color_value=${COLOR_VALUE}
+&{FILTER_FOR_RED_COLOR}    type=${FILTER_COLOR}    value=#${RED_COLOR_VALUE}    label=${FILTER_LABEL}    color_value=${RED_COLOR_VALUE}
+&{FILTER_FOR_GREEN_COLOR}    type=${FILTER_COLOR}    value=#${GREEN_COLOR_VALUE}    label=${FILTER_LABEL}    color_value=${GREEN_COLOR_VALUE}
+&{FILTER_FOR_BLACK_COLOR}    type=${FILTER_COLOR}    value=#${BLACK_COLOR_VALUE}    label=${FILTER_LABEL}    color_value=${BLACK_COLOR_VALUE}
+&{FILTER_FOR_WHITE_COLOR}    type=${FILTER_COLOR}    value=#${WHITE_COLOR_VALUE}    label=${FILTER_LABEL}    color_value=${WHITE_COLOR_VALUE}
 
 
 &{FILTER_PRICE_0_200}      type=${FILTER_PRICE}     value=${PRICE_POSITION_0_200}    label=${FILTER_LABEL}    price_range=${PRICE_RANGE_0_200}
