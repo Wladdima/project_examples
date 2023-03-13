@@ -34,7 +34,7 @@ Filer By Prices Should Work
     ${SEARCH_ATTRIBUTE}    ${FILTER_PRICE_600_800}
     ${SEARCH_ATTRIBUTE}    ${FILTER_PRICE_800}
 
-Filter Bz Colors Should Work
+Filter By Colors Should Work
     [Template]    Filter Items By Colors    
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_RED_COLOR}
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_GREEN_COLOR}
