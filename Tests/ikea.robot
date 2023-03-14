@@ -22,6 +22,7 @@ Valid Error Text After Login With Invalid Data Should Be Seen
     ${LOGIN_WITHOUT_EMAIL}
     ${LOGIN_WITHOUT_PASSWORD}
 
+
 Search Should Work
     Find item    ${SEARCH_ATTRIBUTE}
     Sleep        3s

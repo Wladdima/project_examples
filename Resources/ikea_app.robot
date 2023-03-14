@@ -21,6 +21,7 @@ Login with invalid data
     main_page.Open "Main" Page
     top_nav.Open Login Menu
     main_page.Open "Login" Page
+    Sleep        3s
     login_page.Input invalid login data    ${INVALID_LOGIN_DATA}
     login_page.Submit login
     login_page.Check error message text   ${INVALID_LOGIN_DATA}
@@ -36,9 +37,11 @@ Filter Items By Colors
     main_page.Open "Main" Page
     top_nav.Search    ${SEARCH_ATTRIBUTE}
     results_list.Filter By Colors    ${FILTER}
+    Sleep        3s
 
 Filter Items By Prices
     [Arguments]    ${SEARCH_ATTRIBUTE}    ${FILTER}
     main_page.Open "Main" Page
     top_nav.Search    ${SEARCH_ATTRIBUTE}
     results_list.Filter By Prices    ${FILTER}
+    Sleep        3s

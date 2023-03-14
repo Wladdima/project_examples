@@ -11,6 +11,7 @@ ${SEARCH_BUTTON} =  css=#search-box__searchbutton
 *** Keywords ***
 Open Login Menu
     Click    ${LOGIN_ICON}
+    Sleep    3s
 
 Search
     [Arguments]    ${SEARCH_ATTRIBUTE}
