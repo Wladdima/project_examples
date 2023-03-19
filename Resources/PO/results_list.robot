@@ -10,12 +10,14 @@ ${SEARCH_SUMMARY_HEADING_POSITION} =  css=h1.search-summary__heading
 Filter By Colors
     [Arguments]    ${FILTER}
     Choose Filter    ${FILTER.type}    ${FILTER.value}
+    Sleep    5s
     Check Filtered Results By Colors    ${FILTER.label}   ${FILTER.color_value} 
 
 
 Filter By Prices
     [Arguments]    ${FILTER}
     Choose Filter    ${FILTER.type}    ${FILTER.value}
+    Sleep        5s
     Check Filtered Results By Prices    ${FILTER.label}    ${FILTER.price_range}
     
 

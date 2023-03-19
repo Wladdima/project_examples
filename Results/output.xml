@@ -1,64 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230314 22:08:31.532" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230319 20:27:19.728" rpa="false" schemaversion="3">
 <suite id="s1" name="Ikea" source="C:\development\robot-scripts\project_examples\tests\ikea.robot">
+<test id="s1-t1" name="Ikea &quot;Main&quot; Page Should Open" line="14">
 <kw name="Start Browser" library="common" type="SETUP">
-<kw name="Open Browser" library="Browser">
-<arg>about:blank</arg>
+<kw name="New Page" library="Browser">
+<arg>${MAIN_PAGE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
-<msg timestamp="20230314 22:08:32.252" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20230314 22:08:32.254" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\development\\robot-scripts\\project_examples\\results\\browser\\traces\\c6a7f0a2-ce4a-49c1-a27c-91287413406b"}</msg>
-<msg timestamp="20230314 22:08:32.538" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\development\\robot-scripts\\project_examples\\results\\browser\\traces\\c6a7f0a2-ce4a-49c1-a27c-91287413406b"}</msg>
-<msg timestamp="20230314 22:08:32.538" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": true,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230314 22:08:32.558" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230314 22:08:32.558" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<msg timestamp="20230314 22:08:32.984" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
-<status status="PASS" starttime="20230314 22:08:32.251" endtime="20230314 22:08:32.985"/>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230319 20:27:21.954" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/de/de/</msg>
+<msg timestamp="20230319 20:27:21.955" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230319 20:27:20.417" endtime="20230319 20:27:21.955"/>
 </kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>3s</arg>
-<tag>Config</tag>
+<kw name="Reject all cookies" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${REJECT_COOKIES}</arg>
+<tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230314 22:08:32.990" level="INFO">Set timeout to: 3000</msg>
-<status status="PASS" starttime="20230314 22:08:32.986" endtime="20230314 22:08:32.990"/>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:27:21.955" endtime="20230319 20:27:22.388"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:21.955" endtime="20230319 20:27:22.388"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 22:08:35.004" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230314 22:08:32.990" endtime="20230314 22:08:35.004"/>
+<msg timestamp="20230319 20:27:24.402" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:22.388" endtime="20230319 20:27:24.402"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:32.250" endtime="20230314 22:08:35.005"/>
+<status status="PASS" starttime="20230319 20:27:20.417" endtime="20230319 20:27:24.403"/>
 </kw>
-<test id="s1-t1" name="Ikea &quot;Main&quot; Page Should Open" line="13">
 <kw name="Open Ikea Main Page" library="ikea_app">
-<kw name="Open &quot;Main&quot; Page" library="main_page">
-<kw name="Go To" library="Browser">
-<arg>${MAIN_PAGE_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230314 22:08:37.180" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230314 22:08:35.027" endtime="20230314 22:08:37.180"/>
-</kw>
-<status status="PASS" starttime="20230314 22:08:35.026" endtime="20230314 22:08:37.181"/>
-</kw>
 <kw name="Verify &quot;Main&quot; Page Opened" library="main_page">
 <kw name="Get Text" library="Browser">
 <arg>${MAIN_PAGE_WELCOME_TEXT}</arg>
@@ -68,43 +40,70 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:37.507" level="INFO">Text: 'Willkommen bei IKEA Deutschland'</msg>
-<status status="PASS" starttime="20230314 22:08:37.183" endtime="20230314 22:08:37.508"/>
+<msg timestamp="20230319 20:27:24.449" level="INFO">Text: 'Willkommen bei IKEA Deutschland'</msg>
+<status status="PASS" starttime="20230319 20:27:24.405" endtime="20230319 20:27:24.449"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:37.181" endtime="20230314 22:08:37.508"/>
+<status status="PASS" starttime="20230319 20:27:24.405" endtime="20230319 20:27:24.449"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:35.024" endtime="20230314 22:08:37.508"/>
+<status status="PASS" starttime="20230319 20:27:24.404" endtime="20230319 20:27:24.449"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:35.005" endtime="20230314 22:08:37.510"/>
+<kw name="End Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230319 20:27:24.527" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230319 20:27:24.451" endtime="20230319 20:27:24.527"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:24.450" endtime="20230319 20:27:24.527"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:20.412" endtime="20230319 20:27:24.528"/>
 </test>
-<test id="s1-t2" name="Login Menu Should Open" line="16">
-<kw name="Open &quot;Login&quot; Menu" library="ikea_app">
-<kw name="Open &quot;Main&quot; Page" library="main_page">
-<kw name="Go To" library="Browser">
+<test id="s1-t2" name="Login Menu Should Open" line="17">
+<kw name="Start Browser" library="common" type="SETUP">
+<kw name="New Page" library="Browser">
 <arg>${MAIN_PAGE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230314 22:08:38.349" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230314 22:08:37.531" endtime="20230314 22:08:38.350"/>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230319 20:27:26.231" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/de/de/</msg>
+<msg timestamp="20230319 20:27:26.231" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230319 20:27:24.541" endtime="20230319 20:27:26.231"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:37.531" endtime="20230314 22:08:38.350"/>
+<kw name="Reject all cookies" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${REJECT_COOKIES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:27:26.231" endtime="20230319 20:27:26.491"/>
 </kw>
+<status status="PASS" starttime="20230319 20:27:26.231" endtime="20230319 20:27:26.492"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:27:28.497" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:26.492" endtime="20230319 20:27:28.497"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:24.541" endtime="20230319 20:27:28.498"/>
+</kw>
+<kw name="Open &quot;Login&quot; Menu" library="ikea_app">
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
 <arg>${LOGIN_ICON}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:38.351" endtime="20230314 22:08:39.172"/>
+<status status="PASS" starttime="20230319 20:27:28.500" endtime="20230319 20:27:28.630"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 22:08:42.175" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230314 22:08:39.172" endtime="20230314 22:08:42.175"/>
+<msg timestamp="20230319 20:27:31.643" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:28.630" endtime="20230319 20:27:31.643"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:38.350" endtime="20230314 22:08:42.176"/>
+<status status="PASS" starttime="20230319 20:27:28.500" endtime="20230319 20:27:31.644"/>
 </kw>
 <kw name="Verify &quot;Login&quot; Menu Opened" library="main_page">
 <kw name="Get Text" library="Browser">
@@ -115,44 +114,71 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:42.232" level="INFO">Text: 'Einloggen'</msg>
-<status status="PASS" starttime="20230314 22:08:42.177" endtime="20230314 22:08:42.232"/>
+<msg timestamp="20230319 20:27:31.674" level="INFO">Text: 'Einloggen'</msg>
+<status status="PASS" starttime="20230319 20:27:31.645" endtime="20230319 20:27:31.674"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:42.176" endtime="20230314 22:08:42.233"/>
+<status status="PASS" starttime="20230319 20:27:31.644" endtime="20230319 20:27:31.675"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:37.530" endtime="20230314 22:08:42.233"/>
+<status status="PASS" starttime="20230319 20:27:28.499" endtime="20230319 20:27:31.675"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:37.525" endtime="20230314 22:08:42.234"/>
+<kw name="End Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230319 20:27:31.737" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230319 20:27:31.676" endtime="20230319 20:27:31.737"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:31.676" endtime="20230319 20:27:31.737"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:24.536" endtime="20230319 20:27:31.738"/>
 </test>
-<test id="s1-t3" name="Valid Error Text After Login With Invalid Data Should Be Seen" line="19">
-<kw name="Login with invalid data" library="ikea_app">
-<arg>${LOGIN_WITH_INVALID_DATA}</arg>
-<kw name="Open &quot;Main&quot; Page" library="main_page">
-<kw name="Go To" library="Browser">
+<test id="s1-t3" name="Valid Error Text After Login With Invalid Data Should Be Seen" line="20">
+<kw name="Start Browser" library="common" type="SETUP">
+<kw name="New Page" library="Browser">
 <arg>${MAIN_PAGE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230314 22:08:43.376" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230314 22:08:42.257" endtime="20230314 22:08:43.377"/>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230319 20:27:33.528" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/de/de/</msg>
+<msg timestamp="20230319 20:27:33.528" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230319 20:27:31.749" endtime="20230319 20:27:33.528"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:42.256" endtime="20230314 22:08:43.377"/>
+<kw name="Reject all cookies" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${REJECT_COOKIES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:27:33.530" endtime="20230319 20:27:34.015"/>
 </kw>
+<status status="PASS" starttime="20230319 20:27:33.530" endtime="20230319 20:27:34.015"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:27:36.022" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:34.015" endtime="20230319 20:27:36.022"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:31.749" endtime="20230319 20:27:36.022"/>
+</kw>
+<kw name="Login with invalid data" library="ikea_app">
+<arg>${LOGIN_WITH_INVALID_DATA}</arg>
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
 <arg>${LOGIN_ICON}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:43.378" endtime="20230314 22:08:43.763"/>
+<status status="PASS" starttime="20230319 20:27:36.026" endtime="20230319 20:27:36.128"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 22:08:46.770" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230314 22:08:43.765" endtime="20230314 22:08:46.771"/>
+<msg timestamp="20230319 20:27:39.135" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:36.129" endtime="20230319 20:27:39.135"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:43.377" endtime="20230314 22:08:46.771"/>
+<status status="PASS" starttime="20230319 20:27:36.024" endtime="20230319 20:27:39.136"/>
 </kw>
 <kw name="Open &quot;Login&quot; Page" library="main_page">
 <kw name="Click" library="Browser">
@@ -160,15 +186,15 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:46.772" endtime="20230314 22:08:47.118"/>
+<status status="PASS" starttime="20230319 20:27:39.137" endtime="20230319 20:27:39.652"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:46.771" endtime="20230314 22:08:47.119"/>
+<status status="PASS" starttime="20230319 20:27:39.136" endtime="20230319 20:27:39.652"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 22:08:50.130" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230314 22:08:47.119" endtime="20230314 22:08:50.130"/>
+<msg timestamp="20230319 20:27:42.659" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:39.652" endtime="20230319 20:27:42.659"/>
 </kw>
 <kw name="Input invalid login data" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -180,10 +206,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:50.134" level="INFO">Types the text 'abc123@mail.com' in the given field.</msg>
-<status status="PASS" starttime="20230314 22:08:50.133" endtime="20230314 22:08:50.339"/>
+<msg timestamp="20230319 20:27:42.665" level="INFO">Types the text 'abc123@mail.com' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:27:42.664" endtime="20230319 20:27:42.786"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:50.131" endtime="20230314 22:08:50.339"/>
+<status status="PASS" starttime="20230319 20:27:42.661" endtime="20230319 20:27:42.786"/>
 </kw>
 <kw name="Input Password" library="login_page">
 <arg>${INVALID_LOGIN_DATA.password}</arg>
@@ -193,12 +219,18 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:50.342" level="INFO">Types the text '12345678' in the given field.</msg>
-<status status="PASS" starttime="20230314 22:08:50.341" endtime="20230314 22:08:50.428"/>
+<msg timestamp="20230319 20:27:42.787" level="INFO">Types the text '12345678' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:27:42.787" endtime="20230319 20:27:42.841"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:50.339" endtime="20230314 22:08:50.429"/>
+<status status="PASS" starttime="20230319 20:27:42.786" endtime="20230319 20:27:42.842"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:50.131" endtime="20230314 22:08:50.429"/>
+<status status="PASS" starttime="20230319 20:27:42.660" endtime="20230319 20:27:42.842"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:27:45.845" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:42.842" endtime="20230319 20:27:45.846"/>
 </kw>
 <kw name="Submit login" library="login_page">
 <kw name="Click" library="Browser">
@@ -206,9 +238,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:50.430" endtime="20230314 22:08:50.547"/>
+<status status="PASS" starttime="20230319 20:27:45.848" endtime="20230319 20:27:45.938"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:50.429" endtime="20230314 22:08:50.547"/>
+<status status="PASS" starttime="20230319 20:27:45.847" endtime="20230319 20:27:45.938"/>
 </kw>
 <kw name="Check error message text" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -220,41 +252,37 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:50.774" level="INFO">Text: 'Hej! Beim Anfordern dieser Seite ist ein Fehler aufgetreten. Bitte aktualisiere die Seite, um es erneut zu versuchen.'</msg>
-<status status="PASS" starttime="20230314 22:08:50.548" endtime="20230314 22:08:50.774"/>
+<msg timestamp="20230319 20:27:46.160" level="INFO">Text: 'Hej! Beim Anfordern dieser Seite ist ein Fehler aufgetreten. Bitte aktualisiere die Seite, um es erneut zu versuchen.'</msg>
+<status status="PASS" starttime="20230319 20:27:45.938" endtime="20230319 20:27:46.160"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:50.547" endtime="20230314 22:08:50.774"/>
+<kw name="Click" library="Browser">
+<arg>css=#root &gt; div &gt; div.sc-bdVaJa.sc-exAgwC.hfVlac &gt; div.sc-bwzfXH.sc-TOsTZ.wCqwW &gt; a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:27:46.160" endtime="20230319 20:27:46.298"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:42.255" endtime="20230314 22:08:50.774"/>
+<status status="PASS" starttime="20230319 20:27:45.938" endtime="20230319 20:27:46.298"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:36.023" endtime="20230319 20:27:46.298"/>
 </kw>
 <kw name="Login with invalid data" library="ikea_app">
 <arg>${LOGIN_WITHOUT_EMAIL}</arg>
-<kw name="Open &quot;Main&quot; Page" library="main_page">
-<kw name="Go To" library="Browser">
-<arg>${MAIN_PAGE_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20230314 22:08:52.069" level="INFO">Successfully opened URL https://www.ikea.com/de/de/</msg>
-<status status="PASS" starttime="20230314 22:08:50.777" endtime="20230314 22:08:52.070"/>
-</kw>
-<status status="PASS" starttime="20230314 22:08:50.776" endtime="20230314 22:08:52.070"/>
-</kw>
 <kw name="Open Login Menu" library="top_nav">
 <kw name="Click" library="Browser">
 <arg>${LOGIN_ICON}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:52.071" endtime="20230314 22:08:52.396"/>
+<status status="PASS" starttime="20230319 20:27:46.300" endtime="20230319 20:27:47.112"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 22:08:55.405" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230314 22:08:52.396" endtime="20230314 22:08:55.405"/>
+<msg timestamp="20230319 20:27:50.114" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:47.112" endtime="20230319 20:27:50.114"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:52.070" endtime="20230314 22:08:55.406"/>
+<status status="PASS" starttime="20230319 20:27:46.300" endtime="20230319 20:27:50.115"/>
 </kw>
 <kw name="Open &quot;Login&quot; Page" library="main_page">
 <kw name="Click" library="Browser">
@@ -262,15 +290,15 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:55.407" endtime="20230314 22:08:55.548"/>
+<status status="PASS" starttime="20230319 20:27:50.116" endtime="20230319 20:27:50.227"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:55.406" endtime="20230314 22:08:55.549"/>
+<status status="PASS" starttime="20230319 20:27:50.115" endtime="20230319 20:27:50.227"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 22:08:58.563" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230314 22:08:55.549" endtime="20230314 22:08:58.563"/>
+<msg timestamp="20230319 20:27:53.238" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:50.227" endtime="20230319 20:27:53.238"/>
 </kw>
 <kw name="Input invalid login data" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -282,10 +310,10 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:58.568" level="INFO">Types the text '' in the given field.</msg>
-<status status="PASS" starttime="20230314 22:08:58.568" endtime="20230314 22:08:58.649"/>
+<msg timestamp="20230319 20:27:53.244" level="INFO">Types the text '' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:27:53.243" endtime="20230319 20:27:53.285"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:58.565" endtime="20230314 22:08:58.650"/>
+<status status="PASS" starttime="20230319 20:27:53.240" endtime="20230319 20:27:53.285"/>
 </kw>
 <kw name="Input Password" library="login_page">
 <arg>${INVALID_LOGIN_DATA.password}</arg>
@@ -295,12 +323,18 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:58.653" level="INFO">Types the text '12345678' in the given field.</msg>
-<status status="PASS" starttime="20230314 22:08:58.652" endtime="20230314 22:08:58.774"/>
+<msg timestamp="20230319 20:27:53.287" level="INFO">Types the text '12345678' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:27:53.286" endtime="20230319 20:27:53.354"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:58.650" endtime="20230314 22:08:58.774"/>
+<status status="PASS" starttime="20230319 20:27:53.286" endtime="20230319 20:27:53.354"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:58.564" endtime="20230314 22:08:58.775"/>
+<status status="PASS" starttime="20230319 20:27:53.239" endtime="20230319 20:27:53.354"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:27:56.362" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:53.354" endtime="20230319 20:27:56.363"/>
 </kw>
 <kw name="Submit login" library="login_page">
 <kw name="Click" library="Browser">
@@ -308,9 +342,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230314 22:08:58.776" endtime="20230314 22:08:58.877"/>
+<status status="PASS" starttime="20230319 20:27:56.365" endtime="20230319 20:27:56.450"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:58.775" endtime="20230314 22:08:58.878"/>
+<status status="PASS" starttime="20230319 20:27:56.364" endtime="20230319 20:27:56.450"/>
 </kw>
 <kw name="Check error message text" library="login_page">
 <arg>${INVALID_LOGIN_DATA}</arg>
@@ -322,8 +356,1087 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230314 22:08:58.913" level="INFO">Text: 'Bitte logge dich mit deiner E-Mail Adresse ein.\xa0'</msg>
-<status status="PASS" starttime="20230314 22:08:58.879" endtime="20230314 22:08:58.913"/>
+<msg timestamp="20230319 20:27:56.494" level="INFO">Text: 'Bitte logge dich mit deiner E-Mail Adresse ein.\xa0'</msg>
+<status status="PASS" starttime="20230319 20:27:56.450" endtime="20230319 20:27:56.494"/>
 </kw>
-<status status="PASS" starttime="20230314 22:08:58.878" endtime="20230314 22:08:58.913"/>
+<kw name="Click" library="Browser">
+<arg>css=#root &gt; div &gt; div.sc-bdVaJa.sc-exAgwC.hfVlac &gt; div.sc-bwzfXH.sc-TOsTZ.wCqwW &gt; a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:27:56.494" endtime="20230319 20:27:56.600"/>
 </kw>
+<status status="PASS" starttime="20230319 20:27:56.450" endtime="20230319 20:27:56.601"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:46.299" endtime="20230319 20:27:56.601"/>
+</kw>
+<kw name="Login with invalid data" library="ikea_app">
+<arg>${LOGIN_WITHOUT_PASSWORD}</arg>
+<kw name="Open Login Menu" library="top_nav">
+<kw name="Click" library="Browser">
+<arg>${LOGIN_ICON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:27:56.603" endtime="20230319 20:27:57.370"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:00.378" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:27:57.370" endtime="20230319 20:28:00.378"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:56.602" endtime="20230319 20:28:00.379"/>
+</kw>
+<kw name="Open &quot;Login&quot; Page" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:00.380" endtime="20230319 20:28:00.499"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:00.379" endtime="20230319 20:28:00.499"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:03.506" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:00.499" endtime="20230319 20:28:03.506"/>
+</kw>
+<kw name="Input invalid login data" library="login_page">
+<arg>${INVALID_LOGIN_DATA}</arg>
+<kw name="Input Username" library="login_page">
+<arg>${INVALID_LOGIN_DATA.email}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${USERNAME_FIELD}</arg>
+<arg>${Username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:03.512" level="INFO">Types the text 'abc@mail.com' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:03.511" endtime="20230319 20:28:03.611"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:03.508" endtime="20230319 20:28:03.612"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${INVALID_LOGIN_DATA.password}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${Password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:03.613" level="INFO">Types the text '' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:03.612" endtime="20230319 20:28:03.635"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:03.612" endtime="20230319 20:28:03.636"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:03.507" endtime="20230319 20:28:03.636"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:06.643" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:03.636" endtime="20230319 20:28:06.643"/>
+</kw>
+<kw name="Submit login" library="login_page">
+<kw name="Click" library="Browser">
+<arg>${SUBMIT_LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:06.645" endtime="20230319 20:28:06.761"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:06.644" endtime="20230319 20:28:06.761"/>
+</kw>
+<kw name="Check error message text" library="login_page">
+<arg>${INVALID_LOGIN_DATA}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${INVALID_LOGIN_DATA.error_message_position}</arg>
+<arg>contains</arg>
+<arg>${INVALID_LOGIN_DATA.error_message}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:06.790" level="INFO">Text: 'Es tut uns leid, wir können dich nicht ohne Passwort einloggen.\xa0'</msg>
+<status status="PASS" starttime="20230319 20:28:06.762" endtime="20230319 20:28:06.790"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=#root &gt; div &gt; div.sc-bdVaJa.sc-exAgwC.hfVlac &gt; div.sc-bwzfXH.sc-TOsTZ.wCqwW &gt; a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:06.791" endtime="20230319 20:28:06.894"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:06.761" endtime="20230319 20:28:06.894"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:56.602" endtime="20230319 20:28:06.894"/>
+</kw>
+<kw name="End Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230319 20:28:06.971" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230319 20:28:06.896" endtime="20230319 20:28:06.971"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:06.895" endtime="20230319 20:28:06.971"/>
+</kw>
+<status status="PASS" starttime="20230319 20:27:31.744" endtime="20230319 20:28:06.972"/>
+</test>
+<test id="s1-t4" name="Search Should Work" line="27">
+<kw name="Start Browser" library="common" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${MAIN_PAGE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230319 20:28:08.692" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/de/de/</msg>
+<msg timestamp="20230319 20:28:08.692" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230319 20:28:06.980" endtime="20230319 20:28:08.692"/>
+</kw>
+<kw name="Reject all cookies" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${REJECT_COOKIES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:08.693" endtime="20230319 20:28:09.096"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:08.692" endtime="20230319 20:28:09.096"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:11.104" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:09.096" endtime="20230319 20:28:11.104"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:06.979" endtime="20230319 20:28:11.104"/>
+</kw>
+<kw name="Find item" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:11.109" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:11.107" endtime="20230319 20:28:11.212"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:13.222" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:11.213" endtime="20230319 20:28:13.222"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:13.223" endtime="20230319 20:28:13.921"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:11.106" endtime="20230319 20:28:13.921"/>
+</kw>
+<kw name="Check Search Summary Heading" library="results_list">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${SEARCH_SUMMARY_HEADING_POSITION}</arg>
+<arg>contains</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:14.968" level="INFO">Text: 'Ergebnisse für „sofa“'</msg>
+<status status="PASS" starttime="20230319 20:28:13.922" endtime="20230319 20:28:14.968"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:13.922" endtime="20230319 20:28:14.969"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:11.105" endtime="20230319 20:28:14.969"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:17.983" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:14.969" endtime="20230319 20:28:17.984"/>
+</kw>
+<kw name="End Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230319 20:28:18.074" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230319 20:28:17.987" endtime="20230319 20:28:18.074"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:17.986" endtime="20230319 20:28:18.075"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:06.977" endtime="20230319 20:28:18.076"/>
+</test>
+<test id="s1-t5" name="Filer By Prices Should Work" line="31">
+<kw name="Start Browser" library="common" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${MAIN_PAGE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230319 20:28:19.595" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/de/de/</msg>
+<msg timestamp="20230319 20:28:19.595" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230319 20:28:18.085" endtime="20230319 20:28:19.595"/>
+</kw>
+<kw name="Reject all cookies" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${REJECT_COOKIES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:19.596" endtime="20230319 20:28:20.107"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:19.595" endtime="20230319 20:28:20.107"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:22.114" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:20.107" endtime="20230319 20:28:22.114"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:18.084" endtime="20230319 20:28:22.115"/>
+</kw>
+<kw name="Filter Items By Prices" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_PRICE_0_200}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:22.122" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:22.118" endtime="20230319 20:28:22.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:24.229" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:22.219" endtime="20230319 20:28:24.229"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:24.230" endtime="20230319 20:28:24.431"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:22.117" endtime="20230319 20:28:24.431"/>
+</kw>
+<kw name="Filter By Prices" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:24.433" endtime="20230319 20:28:25.499"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:25.499" endtime="20230319 20:28:25.679"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:28.688" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:25.680" endtime="20230319 20:28:28.688"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:24.431" endtime="20230319 20:28:28.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:33.692" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:28.690" endtime="20230319 20:28:33.692"/>
+</kw>
+<kw name="Check Filtered Results By Prices" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.price_range}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_PRICE_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:33.725" level="INFO">Text: '0,00\xa0-\xa0199,99\xa0€'</msg>
+<status status="PASS" starttime="20230319 20:28:33.698" endtime="20230319 20:28:33.726"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:33.693" endtime="20230319 20:28:33.726"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:24.431" endtime="20230319 20:28:33.726"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:22.116" endtime="20230319 20:28:33.726"/>
+</kw>
+<kw name="Filter Items By Prices" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_PRICE_200_400}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:33.728" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:33.727" endtime="20230319 20:28:33.830"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:35.835" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:33.830" endtime="20230319 20:28:35.835"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:35.836" endtime="20230319 20:28:35.910"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:33.727" endtime="20230319 20:28:35.910"/>
+</kw>
+<kw name="Filter By Prices" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:35.913" endtime="20230319 20:28:36.137"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:36.137" endtime="20230319 20:28:36.253"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:39.267" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:36.254" endtime="20230319 20:28:39.267"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:35.910" endtime="20230319 20:28:39.268"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:44.272" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:39.269" endtime="20230319 20:28:44.272"/>
+</kw>
+<kw name="Check Filtered Results By Prices" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.price_range}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_PRICE_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:44.300" level="INFO">Text: '200,00\xa0-\xa0399,99\xa0€'</msg>
+<status status="PASS" starttime="20230319 20:28:44.277" endtime="20230319 20:28:44.301"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:44.273" endtime="20230319 20:28:44.301"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:35.910" endtime="20230319 20:28:44.301"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:33.726" endtime="20230319 20:28:44.301"/>
+</kw>
+<kw name="Filter Items By Prices" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_PRICE_400_600}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:44.303" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:44.302" endtime="20230319 20:28:44.393"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:46.394" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:44.393" endtime="20230319 20:28:46.394"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:46.395" endtime="20230319 20:28:46.495"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:44.302" endtime="20230319 20:28:46.495"/>
+</kw>
+<kw name="Filter By Prices" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:46.497" endtime="20230319 20:28:46.727"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:46.728" endtime="20230319 20:28:46.834"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:49.848" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:46.834" endtime="20230319 20:28:49.848"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:46.496" endtime="20230319 20:28:49.849"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:54.865" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:49.849" endtime="20230319 20:28:54.865"/>
+</kw>
+<kw name="Check Filtered Results By Prices" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.price_range}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_PRICE_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:54.889" level="INFO">Text: '400,00\xa0-\xa0599,99\xa0€'</msg>
+<status status="PASS" starttime="20230319 20:28:54.869" endtime="20230319 20:28:54.890"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:54.866" endtime="20230319 20:28:54.890"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:46.496" endtime="20230319 20:28:54.890"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:44.301" endtime="20230319 20:28:54.890"/>
+</kw>
+<kw name="Filter Items By Prices" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_PRICE_600_800}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:28:54.892" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:28:54.891" endtime="20230319 20:28:54.978"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:28:56.985" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:54.978" endtime="20230319 20:28:56.985"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:56.986" endtime="20230319 20:28:57.112"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:54.891" endtime="20230319 20:28:57.112"/>
+</kw>
+<kw name="Filter By Prices" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:57.114" endtime="20230319 20:28:57.314"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:28:57.315" endtime="20230319 20:28:57.418"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:00.419" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:28:57.418" endtime="20230319 20:29:00.420"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:57.113" endtime="20230319 20:29:00.420"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:05.423" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:00.421" endtime="20230319 20:29:05.423"/>
+</kw>
+<kw name="Check Filtered Results By Prices" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.price_range}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_PRICE_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:05.451" level="INFO">Text: '600,00\xa0-\xa0799,99\xa0€'</msg>
+<status status="PASS" starttime="20230319 20:29:05.429" endtime="20230319 20:29:05.451"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:05.424" endtime="20230319 20:29:05.451"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:57.113" endtime="20230319 20:29:05.451"/>
+</kw>
+<status status="PASS" starttime="20230319 20:28:54.890" endtime="20230319 20:29:05.451"/>
+</kw>
+<kw name="Filter Items By Prices" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_PRICE_800}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:05.454" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:29:05.452" endtime="20230319 20:29:05.542"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:07.553" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:05.542" endtime="20230319 20:29:07.553"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:07.554" endtime="20230319 20:29:07.670"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:05.452" endtime="20230319 20:29:07.670"/>
+</kw>
+<kw name="Filter By Prices" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:07.672" endtime="20230319 20:29:07.927"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:07.928" endtime="20230319 20:29:08.015"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:11.028" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:08.015" endtime="20230319 20:29:11.028"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:07.670" endtime="20230319 20:29:11.028"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:16.042" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:11.028" endtime="20230319 20:29:16.042"/>
+</kw>
+<kw name="Check Filtered Results By Prices" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.price_range}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_PRICE_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:16.069" level="INFO">Text: '800,00+\xa0€'</msg>
+<status status="PASS" starttime="20230319 20:29:16.047" endtime="20230319 20:29:16.069"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:16.043" endtime="20230319 20:29:16.069"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:07.670" endtime="20230319 20:29:16.069"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:05.452" endtime="20230319 20:29:16.069"/>
+</kw>
+<kw name="End Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230319 20:29:16.149" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230319 20:29:16.070" endtime="20230319 20:29:16.149"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:16.070" endtime="20230319 20:29:16.150"/>
+</kw>
+<tag>test:retry(2)</tag>
+<status status="PASS" starttime="20230319 20:28:18.082" endtime="20230319 20:29:16.150"/>
+</test>
+<test id="s1-t6" name="Filter By Colors Should Work" line="40">
+<kw name="Start Browser" library="common" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${MAIN_PAGE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230319 20:29:17.686" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/de/de/</msg>
+<msg timestamp="20230319 20:29:17.686" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20230319 20:29:16.158" endtime="20230319 20:29:17.687"/>
+</kw>
+<kw name="Reject all cookies" library="main_page">
+<kw name="Click" library="Browser">
+<arg>${REJECT_COOKIES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:17.687" endtime="20230319 20:29:18.169"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:17.687" endtime="20230319 20:29:18.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:20.180" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:18.169" endtime="20230319 20:29:20.180"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:16.158" endtime="20230319 20:29:20.180"/>
+</kw>
+<kw name="Filter Items By Colors" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_FOR_RED_COLOR}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:20.185" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:29:20.183" endtime="20230319 20:29:20.297"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:22.312" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:20.297" endtime="20230319 20:29:22.312"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:22.313" endtime="20230319 20:29:22.532"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:20.182" endtime="20230319 20:29:22.532"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:27.545" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:22.532" endtime="20230319 20:29:27.545"/>
+</kw>
+<kw name="Filter By Colors" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:27.549" endtime="20230319 20:29:27.641"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:27.641" endtime="20230319 20:29:27.836"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:30.840" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:27.837" endtime="20230319 20:29:30.840"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:27.547" endtime="20230319 20:29:30.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:35.854" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:30.841" endtime="20230319 20:29:35.854"/>
+</kw>
+<kw name="Check Filtered Results By Colors" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.color_value}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_COLOR_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:35.890" level="INFO">Text: 'rot'</msg>
+<status status="PASS" starttime="20230319 20:29:35.860" endtime="20230319 20:29:35.891"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:35.855" endtime="20230319 20:29:35.891"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:27.546" endtime="20230319 20:29:35.891"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:20.182" endtime="20230319 20:29:35.891"/>
+</kw>
+<kw name="Filter Items By Colors" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_FOR_GREEN_COLOR}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:35.893" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:29:35.892" endtime="20230319 20:29:36.002"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:38.014" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:36.002" endtime="20230319 20:29:38.014"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:38.015" endtime="20230319 20:29:38.128"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:35.892" endtime="20230319 20:29:38.129"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:43.140" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:38.129" endtime="20230319 20:29:43.140"/>
+</kw>
+<kw name="Filter By Colors" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:43.146" endtime="20230319 20:29:43.208"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:43.208" endtime="20230319 20:29:43.312"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:46.328" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:43.312" endtime="20230319 20:29:46.328"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:43.142" endtime="20230319 20:29:46.329"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:51.334" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:46.329" endtime="20230319 20:29:51.334"/>
+</kw>
+<kw name="Check Filtered Results By Colors" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.color_value}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_COLOR_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:51.359" level="INFO">Text: 'grün'</msg>
+<status status="PASS" starttime="20230319 20:29:51.339" endtime="20230319 20:29:51.359"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:51.335" endtime="20230319 20:29:51.359"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:43.141" endtime="20230319 20:29:51.359"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:35.891" endtime="20230319 20:29:51.359"/>
+</kw>
+<kw name="Filter Items By Colors" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_FOR_BLACK_COLOR}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:29:51.361" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:29:51.361" endtime="20230319 20:29:51.449"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:53.460" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:51.450" endtime="20230319 20:29:53.460"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:53.461" endtime="20230319 20:29:53.572"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:51.360" endtime="20230319 20:29:53.572"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:29:58.582" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:53.572" endtime="20230319 20:29:58.582"/>
+</kw>
+<kw name="Filter By Colors" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:58.588" endtime="20230319 20:29:58.662"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:29:58.662" endtime="20230319 20:29:58.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:30:01.753" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:29:58.752" endtime="20230319 20:30:01.753"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:58.584" endtime="20230319 20:30:01.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:30:06.759" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:30:01.754" endtime="20230319 20:30:06.759"/>
+</kw>
+<kw name="Check Filtered Results By Colors" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.color_value}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_COLOR_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:30:06.789" level="INFO">Text: 'schwarz'</msg>
+<status status="PASS" starttime="20230319 20:30:06.764" endtime="20230319 20:30:06.790"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:06.760" endtime="20230319 20:30:06.790"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:58.583" endtime="20230319 20:30:06.790"/>
+</kw>
+<status status="PASS" starttime="20230319 20:29:51.360" endtime="20230319 20:30:06.790"/>
+</kw>
+<kw name="Filter Items By Colors" library="ikea_app">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<arg>${FILTER_FOR_WHITE_COLOR}</arg>
+<kw name="Search" library="top_nav">
+<arg>${SEARCH_ATTRIBUTE}</arg>
+<kw name="Type Text" library="Browser">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${SEARCH_ATTRIBUTE.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230319 20:30:06.792" level="INFO">Types the text 'sofa' in the given field.</msg>
+<status status="PASS" starttime="20230319 20:30:06.791" endtime="20230319 20:30:06.874"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:30:08.875" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230319 20:30:06.874" endtime="20230319 20:30:08.875"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${SEARCH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:30:08.876" endtime="20230319 20:30:08.978"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:06.791" endtime="20230319 20:30:08.978"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:30:13.993" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:30:08.978" endtime="20230319 20:30:13.993"/>
+</kw>
+<kw name="Filter By Colors" library="results_list">
+<arg>${FILTER}</arg>
+<kw name="Choose Filter" library="results_list">
+<arg>${FILTER.type}</arg>
+<arg>${FILTER.value}</arg>
+<kw name="Click" library="Browser">
+<arg>${FILTER_TYPE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:30:13.999" endtime="20230319 20:30:14.059"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${FILTER_VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230319 20:30:14.060" endtime="20230319 20:30:14.168"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:30:17.182" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230319 20:30:14.168" endtime="20230319 20:30:17.182"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:13.995" endtime="20230319 20:30:17.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 20:30:22.189" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 20:30:17.183" endtime="20230319 20:30:22.189"/>
+</kw>
+<kw name="Check Filtered Results By Colors" library="results_list">
+<arg>${FILTER.label}</arg>
+<arg>${FILTER.color_value}</arg>
+<kw name="Get Text" library="Browser">
+<arg>${FILTER_LABEL}</arg>
+<arg>contains</arg>
+<arg>${FILTER_COLOR_VALUE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230319 20:30:22.217" level="INFO">Text: 'weiß'</msg>
+<status status="PASS" starttime="20230319 20:30:22.195" endtime="20230319 20:30:22.217"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:22.190" endtime="20230319 20:30:22.218"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:13.994" endtime="20230319 20:30:22.218"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:06.790" endtime="20230319 20:30:22.218"/>
+</kw>
+<kw name="End Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230319 20:30:22.300" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230319 20:30:22.219" endtime="20230319 20:30:22.300"/>
+</kw>
+<status status="PASS" starttime="20230319 20:30:22.218" endtime="20230319 20:30:22.300"/>
+</kw>
+<tag>test:retry(2)</tag>
+<status status="PASS" starttime="20230319 20:29:16.156" endtime="20230319 20:30:22.301"/>
+</test>
+<status status="PASS" starttime="20230319 20:27:19.729" endtime="20230319 20:30:22.306"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">test:retry(2)</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Ikea">Ikea</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

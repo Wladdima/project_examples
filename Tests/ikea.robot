@@ -3,8 +3,9 @@ Resource    ../Resources/common.robot
 Resource    ../Resources/ikea_app.robot
 Resource    ../Resources/Data/input_user_data.robot
 Resource    ../Resources/Data/search_data.robot
-Suite Setup  Start Browser
-Suite Teardown    End Browser
+Library     RetryFailed
+Test Setup  Start Browser
+Test Teardown    End Browser
 
 *** Variables ***
 
@@ -28,6 +29,7 @@ Search Should Work
     Sleep        3s
 
 Filer By Prices Should Work
+    [Tags]    test:retry(2)
     [Template]    Filter Items By Prices
     ${SEARCH_ATTRIBUTE}    ${FILTER_PRICE_0_200}
     ${SEARCH_ATTRIBUTE}    ${FILTER_PRICE_200_400}
@@ -36,6 +38,7 @@ Filer By Prices Should Work
     ${SEARCH_ATTRIBUTE}    ${FILTER_PRICE_800}
 
 Filter By Colors Should Work
+    [Tags]    test:retry(2)
     [Template]    Filter Items By Colors    
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_RED_COLOR}
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_GREEN_COLOR}

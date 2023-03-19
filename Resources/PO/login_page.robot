@@ -27,3 +27,4 @@ Input invalid login data
 Check error message text
     [Arguments]     ${INVALID_LOGIN_DATA}
     Get Text    ${INVALID_LOGIN_DATA.error_message_position}    contains    ${INVALID_LOGIN_DATA.error_message}
+    Click    css=#root > div > div.sc-bdVaJa.sc-exAgwC.hfVlac > div.sc-bwzfXH.sc-TOsTZ.wCqwW > a
