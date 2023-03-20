@@ -1,11 +1,12 @@
 *** Settings ***
 Resource    ../Resources/common.robot
 Resource    ../Resources/ikea_app.robot
-Resource    ../Resources/Data/input_user_data.robot
+#Resource    ../Resources/Data/input_user_data.robot 
 Resource    ../Resources/Data/search_data.robot
 Library     RetryFailed
 Test Setup  Start Browser
 Test Teardown    End Browser
+
 
 *** Variables ***
 
