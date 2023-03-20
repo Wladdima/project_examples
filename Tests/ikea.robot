@@ -8,6 +8,7 @@ Test Teardown    End Browser
 
 
 *** Variables ***
+${ITEM_NUMBER} =  09272666
 
 
 *** Test Cases ***
@@ -44,3 +45,9 @@ Filter By Colors Should Work
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_GREEN_COLOR}
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_BLACK_COLOR}
     ${SEARCH_ATTRIBUTE}    ${FILTER_FOR_WHITE_COLOR}
+
+User Can Add An Item To Favourites
+    Find item    ${SEARCH_ATTRIBUTE}
+    Sleep        3s
+    results_list.Add Item To Favourites    ${ITEM_NUMBER}
+    results_list.Check Added Item In Favourites    ${ITEM_NUMBER}
