@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../Resources/common.robot
 Resource    ../Resources/ikea_app.robot
-#Resource    ../Resources/Data/input_user_data.robot 
 Resource    ../Resources/Data/search_data.robot
 Library     RetryFailed
 Test Setup  Start Browser
@@ -29,7 +28,7 @@ Search Should Work
     Find item    ${SEARCH_ATTRIBUTE}
     Sleep        3s
 
-Filer By Prices Should Work
+Filter By Prices Should Work
     [Tags]    test:retry(2)
     [Template]    Filter Items By Prices
     ${SEARCH_ATTRIBUTE}    ${FILTER_PRICE_0_200}
