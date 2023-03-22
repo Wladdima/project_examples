@@ -40,3 +40,9 @@ Filter Items By Prices
     [Arguments]    ${SEARCH_ATTRIBUTE}    ${FILTER}
     top_nav.Search    ${SEARCH_ATTRIBUTE}
     results_list.Filter By Prices    ${FILTER}
+
+Add An Item To Favourites
+    [Arguments]    ${SEARCH_ATTRIBUTE}   ${ITEM}     
+    top_nav.Search    ${SEARCH_ATTRIBUTE}
+    results_list.Add Item To Favourites    ${ITEM}
+    results_list.Check Added Item In Favourites    ${ITEM}

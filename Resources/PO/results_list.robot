@@ -1,12 +1,15 @@
 *** Settings ***
 Library    Browser
+Resource   top_nav.robot
 
 
 *** Variables ***
 ${SEARCH_SUMMARY_HEADING_POSITION} =  css=h1.search-summary__heading
 ${ADD_TO_FAVOURITES_ICON} =    css=div.pip-desktop-favourite-button-wrapper > button
 ${FAVOURITES_ICON} =    css=li.hnf-header__shopping-list-link > a > span
-${NOTEPAD_POSITION} =    css=a.ListHeader_listName__3wNZq
+${LIST_POSITION} =    css=a.ListHeader_listName__3wNZq
+${LIST_ITEMS} =    css=ul[data-testid="retail-items"]
+
 
 *** Keywords ***
 Filter By Colors
@@ -45,13 +48,15 @@ Check Filtered Results By Prices
     Get Text       ${FILTER_LABEL}    contains    ${FILTER_PRICE_VALUE}
 
 Add Item To Favourites
-    [Arguments]    ${ITEM_REF_ID}  
-    Click    css=div[data-ref-id="${ITEM_REF_ID}"]
+    [Arguments]    ${ITEM}  
+    Click    css=div[data-ref-id="${ITEM.number}"]
     sleep    2s
     Click    ${ADD_TO_FAVOURITES_ICON}
+    Sleep    3s
 
 Check Added Item In Favourites
-    [Arguments]    ${ITEM_REF_ID}
+    [Arguments]    ${ITEM}
     Click          ${FAVOURITES_ICON}
-    Click          ${NOTEPAD_POSITION}
-#   Get Text       
+    Click          ${LIST_POSITION}
+    Get Text       ${LIST_ITEMS}    contains    ${ITEM.name}
+    Sleep          3s

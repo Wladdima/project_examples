@@ -15,6 +15,8 @@ Open Login Menu
 
 Search
     [Arguments]    ${SEARCH_ATTRIBUTE}
+    Scroll To      ${SEARCH_FIELD}
     Type Text      ${SEARCH_FIELD}    ${SEARCH_ATTRIBUTE.name}
     Sleep          2s
     Click          ${SEARCH_BUTTON}
+    Sleep          3s

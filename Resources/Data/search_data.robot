@@ -1,5 +1,6 @@
 *** Variables ***
-&{SEARCH_ATTRIBUTE}    name=sofa
+&{SEARCH_SOFA}    name=sofa
+&{SEARCH_TABLE}   name=tisch
 ${FILTER_COLOR} =  css=button[aria-label='Filtermethode Farbe']
 ${FILTER_PRICE} =  css=button[aria-label='Filtermethode Preis']
 
